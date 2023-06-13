@@ -7,10 +7,15 @@ class WelcomeC extends React.Component {
     constructor(props){
         console.log("inside constructor");
         super(props);
-        this.state={
+
+       {/*this.state={
             firstname:"Lama ",
             lastname:"kharaz"
+       }*/}
+       this.state={
+        counter:0
        }
+
 
     }
     render(){
@@ -20,22 +25,24 @@ class WelcomeC extends React.Component {
     <h6> type, {this.props.gender}! </h6>
     <h6> Age:{this.props.age}</h6>
     <h4> created by,{this.state.firstname}{this.state.lastname}</h4>
+    <h6>{this.state.counter}</h6>
     <button onClick={()=>{
          this.setState({
-            lastname:"THaeer"
+            counter:this.state.counter +1
 
         })
 
-    }}>Change By Name </button>
+    }}>Change Counter+</button>
 
         </>)
 
     }
-    componentDidMount(){
-        this.setState({
-            lastname:"kharazzz"
 
-        })
+    componentDidMount(){/*
+        this.setState({
+           counter:this.state.counter +1
+
+        })*/
     }
 
 }export default WelcomeC;

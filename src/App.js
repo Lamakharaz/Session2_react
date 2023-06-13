@@ -39,7 +39,7 @@ function App() {
   
     
      {/* <p>{list}</p>*/}
-      <p>{list}</p>
+      <p>{listC}</p>
     {  /*<p>{pro}</p>*/}
 
     </div>
