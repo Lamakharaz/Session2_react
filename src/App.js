@@ -36,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1> Welcome Lama kharaz</h1>
     
      {/* <p>{list}</p>*/}
       <p>{list}</p>
