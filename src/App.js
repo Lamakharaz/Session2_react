@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Product from './Components/Product';
+import WelcomeC from './Components/WelcomeC';
+
+import WelcomeF from './Components/WelcomeF';
+//render list and props
 function App() {
+  const person = [
+    { name: "lama", gender: "female", age: "23" },
+
+    { name: "Abood", gender: "male", age: "12" },
+
+  ];
+  const product = [
+    { name: "product1", price: "10", dec: "pretty1" },
+
+    { name: "product2", price: "20", dec: "pretty2" },
+
+  ]
+
+
+  //rendering list
+  const list = person.map(item =>
+    <WelcomeF name={item.name} gender={item.gender} age={item.age} />
+  );
+
+  const listC = person.map(item =>
+    <WelcomeC name={item.name} gender={item.gender} age={item.age} />
+  );
+  const pro = product.map(item =>
+    <Product name={item.name} price={item.price} dec={item.dec} />
+  );
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     {/* <p>{list}</p>*/}
+      <p>{list}</p>
+    {  /*<p>{pro}</p>*/}
+
     </div>
   );
 }
