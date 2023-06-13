@@ -12,6 +12,7 @@ function WelcomeF(props) {
     <h6> Age:{props.age}</h6>
     <h6> counter: {counter}</h6>
     <button onClick={()=>setCounter(counter+1)}>Counte+1 </button>
+    
     </>)
 }export default WelcomeF;
 
