@@ -13,7 +13,8 @@ function WelcomeF(props) {
     <h6> Age:{props.age}</h6>
     <h6> counter: {counter}</h6>
     <h6> Name: {name}</h6> 
-    <button onClick={()=>setCounter(counter+1)}>Counte+1 </button>
+    <button onClick={()=>setCounter(counter-1)}>- </button>
+    <button onClick={()=>setCounter(counter+1)}>+ </button>
     <button onClick={()=>setName(props.name)}>Change Name </button>
     
     </>)
